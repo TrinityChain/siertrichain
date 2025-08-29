@@ -5,7 +5,7 @@ use tiny_http::{Server, Response};
 fn main() {
     println!("Starting the Triangle NFT Marketplace!");
 
-    let nft_manager = Arc::new(Mutex::new(NFTManager::new()));
+    let _nft_manager = Arc::new(Mutex::new(NFTManager::new()));
 
     let server = Server::http("127.0.0.1:8080").unwrap();
 

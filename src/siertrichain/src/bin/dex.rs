@@ -1,15 +1,15 @@
-use clap::Parser;
+use clap::{Parser, Subcommand};
 
 
 /// SierpinskiChain DEX CLI
 #[derive(Parser, Debug)]
-#[command(author, version, about, long_about = None)]
+#[clap(author, version, about, long_about = None)]
 struct Cli {
-    #[command(subcommand)]
+    #[clap(subcommand)]
     command: Commands,
 }
 
-#[derive(Parser, Debug)]
+#[derive(Subcommand, Debug)]
 enum Commands {
     /// Interact with the exchange
     Exchange,
